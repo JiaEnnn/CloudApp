@@ -1,0 +1,17 @@
+{
+  "servers": {
+    "stitch": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@_davideast/stitch-mcp",
+        "proxy"
+      ],
+      "env": {
+        "STITCH_PROJECT_ID": "alien-device-490508-v5",
+        "STITCH_API_KEY": "AQ.Ab8RN6KBm9hOTWR6g_KF-vDU_1yKJebFfeyY-oKZ9LJjGTNz-w"
+      }
+    }
+  }
+}
