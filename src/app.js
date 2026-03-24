@@ -47,12 +47,5 @@ app.get("/health", (req, res) => {
 
 // 2. Updated listen function
 app.listen(PORT, () => {
-  const url = `http://localhost:${PORT}`;
   console.log(`LifeTrack running on port ${PORT}`);
-  console.log(`Opening browser to ${url}...`);
-
-  // Determine the command based on your Operating System (Windows uses 'start')
-  const startCommand = process.platform === 'darwin' ? 'open' : process.platform === 'win32' ? 'start' : 'xdg-open';
-  
-  exec(`${startCommand} ${url}`);
 });

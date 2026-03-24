@@ -22,6 +22,6 @@ export default defineConfig({
     },
   },
   server: {
-    open: '/pages/index.html',
+    // open: '/pages/index.html', // Disabled auto-open browser
   },
 });
