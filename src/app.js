@@ -1,11 +1,13 @@
 const express = require("express");
 const path = require("path");
-const { exec } = require("child_process"); // 1. Added this for auto-opening
 const dotenv = require("dotenv");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 
 dotenv.config();
+
+require("./config/firebase");
+const sequelize = require("./config/db");
 
 const authRoutes = require("./routes/authRoutes");
 const habitRoutes = require("./routes/habitRoutes");
@@ -20,7 +22,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "..", "public")));
 
-// Routes
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "pages", "index.html"));
 });
@@ -33,10 +34,6 @@ app.get("/register", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "pages", "register.html"));
 });
 
-app.get("/dashboard", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "public", "pages", "dashboard.html"));
-});
-
 app.use("/api/auth", authRoutes);
 app.use("/api/habits", habitRoutes);
 app.use("/api/dashboard", dashboardRoutes);
@@ -45,14 +42,17 @@ app.get("/health", (req, res) => {
   res.status(200).send("OK");
 });
 
-// 2. Updated listen function
-app.listen(PORT, () => {
-  const url = `http://localhost:${PORT}`;
-  console.log(`LifeTrack running on port ${PORT}`);
-  console.log(`Opening browser to ${url}...`);
-
-  // Determine the command based on your Operating System (Windows uses 'start')
-  const startCommand = process.platform === 'darwin' ? 'open' : process.platform === 'win32' ? 'start' : 'xdg-open';
-  
-  exec(`${startCommand} ${url}`);
+app.use((req, res) => {
+  res.status(404).send("404 Not Found");
 });
+
+sequelize
+  .sync()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`LifeTrack running on port ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.error("Database sync failed:", error);
+  });

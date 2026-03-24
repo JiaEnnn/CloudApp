@@ -74,18 +74,18 @@
     <div class="flex flex-col gap-4 px-4 py-4 max-w-lg mx-auto w-full">
       <label class="flex flex-col w-full">
         <p class="text-slate-900 dark:text-slate-100 text-sm font-semibold leading-normal pb-2">Full Name</p>
-        <input class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-slate-400 p-[15px] text-base font-normal" placeholder="John Doe" type="text" />
+        <input id="fullName" class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-slate-400 p-[15px] text-base font-normal" placeholder="John Doe" type="text" />
       </label>
 
       <label class="flex flex-col w-full">
         <p class="text-slate-900 dark:text-slate-100 text-sm font-semibold leading-normal pb-2">Email Address</p>
-        <input class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-slate-400 p-[15px] text-base font-normal" placeholder="name@example.com" type="email" />
+        <input id="email" class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-slate-400 p-[15px] text-base font-normal" placeholder="name@example.com" type="email" />
       </label>
 
       <label class="flex flex-col w-full">
         <p class="text-slate-900 dark:text-slate-100 text-sm font-semibold leading-normal pb-2">Password</p>
         <div class="flex w-full items-stretch rounded-lg">
-          <input class="form-input flex w-full min-w-0 flex-1 rounded-lg text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-slate-400 p-[15px] rounded-r-none border-r-0 pr-2 text-base font-normal" placeholder="Create a password" type="password" />
+          <input id="password" class="form-input flex w-full min-w-0 flex-1 rounded-lg text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-slate-400 p-[15px] rounded-r-none border-r-0 pr-2 text-base font-normal" placeholder="Create a password" type="password" />
           <div class="text-slate-400 flex border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 items-center justify-center pr-[15px] rounded-r-lg border-l-0">
             <span class="material-symbols-outlined">visibility</span>
           </div>
@@ -94,7 +94,7 @@
 
       <label class="flex flex-col w-full">
         <p class="text-slate-900 dark:text-slate-100 text-sm font-semibold leading-normal pb-2">Confirm Password</p>
-        <input class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-slate-400 p-[15px] text-base font-normal" placeholder="Repeat your password" type="password" />
+        <input id="confirmPassword" class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-slate-400 p-[15px] text-base font-normal" placeholder="Repeat your password" type="password" />
       </label>
 
       <button id="createAccountBtn" class="w-full h-14 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl transition-colors mt-4">
@@ -122,7 +122,9 @@
       <a id="loginNowLink" class="text-primary font-bold hover:underline" href="/login">Login now</a>
     </p>
 
-    <script src="/js/register.js"></script>
+    <p id="registerMessage" class="text-sm text-center mt-3 text-red-500"></p>
+
+    <script type="module" src="/js/register.js"></script>
   </div>
 </body>
 </html>
