@@ -1,31 +1,32 @@
-// Redirects for Login tab and Login now link
-window.addEventListener('DOMContentLoaded', function() {
-    // Login tab (menu)
-    const tabLinks = document.querySelectorAll('a');
-    tabLinks.forEach(link => {
-        if (link.textContent.trim() === 'Login') {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.location.href = 'login.html';
-            });
-        }
+window.addEventListener("DOMContentLoaded", function () {
+  const closeBtn = document.getElementById("closeBtn");
+  const loginTab = document.getElementById("loginTab");
+  const loginNowLink = document.getElementById("loginNowLink");
+  const createAccountBtn = document.getElementById("createAccountBtn");
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      window.location.href = "/";
     });
+  }
 
-    // Login now link in footer
-    const loginNow = document.querySelector('a.text-primary.font-bold');
-    if (loginNow && loginNow.textContent.trim().toLowerCase().includes('login')) {
-        loginNow.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.location.href = 'login.html';
-        });
-    }
+  if (loginTab) {
+    loginTab.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.location.href = "/login";
+    });
+  }
 
-    // Cross icon (close) redirects to index page
-    const closeIcon = document.querySelector('.material-symbols-outlined.text-2xl');
-    if (closeIcon) {
-        closeIcon.style.cursor = 'pointer';
-        closeIcon.addEventListener('click', function() {
-            window.location.href = 'index.html';
-        });
-    }
+  if (loginNowLink) {
+    loginNowLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.location.href = "/login";
+    });
+  }
+
+  if (createAccountBtn) {
+    createAccountBtn.addEventListener("click", function () {
+      console.log("Create Account button clicked");
+    });
+  }
 });
