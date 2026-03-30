@@ -1,33 +1,32 @@
-// Redirects for Sign Up tab and Sign Up now link
-window.addEventListener('DOMContentLoaded', function() {
-    // Sign Up tab (menu)
-    const tabLinks = document.querySelectorAll('a');
-    tabLinks.forEach(link => {
-        if (link.textContent.trim() === 'Sign Up') {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.location.href = 'register.html';
-            });
-        }
-    });
+window.addEventListener("DOMContentLoaded", function () {
+  const closeBtn = document.getElementById("closeBtn");
+  const signUpTab = document.getElementById("signUpTab");
+  const signUpNowLink = document.getElementById("signUpNowLink");
+  const signInBtn = document.getElementById("signInBtn");
 
-    // Sign Up now link in footer (handle all possible matches)
-    const allLinks = document.querySelectorAll('a');
-    allLinks.forEach(link => {
-        if (link.textContent.trim().toLowerCase().replace(/\s+/g, '') === 'signupnow') {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.location.href = 'register.html';
-            });
-        }
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      window.location.href = "/";
     });
+  }
 
-    // Cross icon (close) redirects to index page
-    const closeIcon = document.querySelector('.material-symbols-outlined.text-2xl');
-    if (closeIcon) {
-        closeIcon.style.cursor = 'pointer';
-        closeIcon.addEventListener('click', function() {
-            window.location.href = 'index.html';
-        });
-    }
+  if (signUpTab) {
+    signUpTab.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.location.href = "/register";
+    });
+  }
+
+  if (signUpNowLink) {
+    signUpNowLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.location.href = "/register";
+    });
+  }
+
+  if (signInBtn) {
+    signInBtn.addEventListener("click", function () {
+      console.log("Sign In button clicked");
+    });
+  }
 });
