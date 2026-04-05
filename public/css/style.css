@@ -24,3 +24,9 @@ img, input, button {
     max-width: 100%;
     box-sizing: border-box;
 }
+
+/* This hides the default browser time/date icon */
+input::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
