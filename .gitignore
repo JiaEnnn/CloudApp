@@ -2,4 +2,8 @@ node_modules/
 .env
 .DS_Store
 npm-debug.log
+<<<<<<< HEAD
 src/config/serviceAccountKey.json
+=======
+firebase-service-account.json
+>>>>>>> 201809c4c06e9d8a65c8cec40e80c06ecd077008

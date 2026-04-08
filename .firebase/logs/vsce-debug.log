@@ -1,0 +1,75 @@
+[debug] [2026-04-05T03:26:33.968Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2026-04-05T03:26:55.343Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2026-04-05T03:26:55.346Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-05T03:26:55.347Z] > authorizing via signed-in user (brandonting.qwe@gmail.com)
+[debug] [2026-04-05T03:26:55.350Z] Checked if tokens are valid: true, expires at: 1775362864816
+[debug] [2026-04-05T03:26:55.351Z] Checked if tokens are valid: true, expires at: 1775362864816
+[debug] [2026-04-05T03:26:55.351Z] [Firebase Plugin] User found:  brandonting.qwe@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2026-04-05T03:26:55.353Z] Checked if tokens are valid: true, expires at: 1775362864816
+[debug] [2026-04-05T03:26:55.354Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-04-05T03:26:55.366Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 3.3.1) on port 50001
+[info] i  dataconnect: downloading dataconnect-emulator-3.3.1.exe... {"metadata":{"emulator":{"name":"dataconnect"},"message":"downloading dataconnect-emulator-3.3.1.exe..."}}
+[debug] [2026-04-05T03:26:56.278Z] >>> [apiv2][query] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-windows-amd64-v3.3.1 
+[debug] [2026-04-05T03:26:56.827Z] <<< [apiv2][status] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-windows-amd64-v3.3.1 200
+[debug] [2026-04-05T03:26:56.828Z] <<< [apiv2][body] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-windows-amd64-v3.3.1 [stream]
+[debug] [2026-04-05T03:26:57.015Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-04-05T03:26:57.015Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  dataconnect: Removing outdated emulator files: dataconnect-emulator-3.2.1.exe {"metadata":{"emulator":{"name":"dataconnect"},"message":"Removing outdated emulator files: dataconnect-emulator-3.2.1.exe"}}
+[info] i  dataconnect: Removing outdated emulator files: dataconnect-emulator-3.3.0.exe {"metadata":{"emulator":{"name":"dataconnect"},"message":"Removing outdated emulator files: dataconnect-emulator-3.3.0.exe"}}
+[debug] [2026-04-05T03:27:07.148Z] W0405 11:27:07.080960    5736 control.go:74] [projects/emulator/locations/emulator/services/lifetrack-6ef3a-service 5ad3] connector "example" has errors: example\mutations.gql:6:3: Cannot query field "movie_insert" on type "Mutation".
+example\mutations.gql:12:3: Cannot query field "user_upsert" on type "Mutation".
+example\mutations.gql:18:3: Cannot query field "review_upsert" on type "Mutation".
+example\mutations.gql:32:3: Cannot query field "review_delete" on type "Mutation".
+example\queries.gql:6:3: Cannot query field "movies" on type "Query".
+example\queries.gql:16:3: Cannot query field "users" on type "Query".
+example\queries.gql:25:3: Cannot query field "user" on type "Query".
+example\queries.gql:44:3: Cannot query field "movie" on type "Query".
+example\queries.gql:68:3: Cannot query field "movies" on type "Query".
+
+sources: example\mutations.gql [1243B] example\queries.gql [1801B] 
+I0405 11:27:07.142517    5736 control.go:100] [projects/emulator/locations/emulator/services/lifetrack-6ef3a-service 5ad3] UpdateResources(): done
+Main schema: sources: schema\schema.gql [0B] 
+Connector "example": sources: example\mutations.gql [1243B] example\queries.gql [1801B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W0405 11:27:07.080960    5736 control.go:74] [projects/emulator/locations/emulator/services/lifetrack-6ef3a-service 5ad3] connector \"example\" has errors: example\\mutations.gql:6:3: Cannot query field \"movie_insert\" on type \"Mutation\".\nexample\\mutations.gql:12:3: Cannot query field \"user_upsert\" on type \"Mutation\".\nexample\\mutations.gql:18:3: Cannot query field \"review_upsert\" on type \"Mutation\".\nexample\\mutations.gql:32:3: Cannot query field \"review_delete\" on type \"Mutation\".\nexample\\queries.gql:6:3: Cannot query field \"movies\" on type \"Query\".\nexample\\queries.gql:16:3: Cannot query field \"users\" on type \"Query\".\nexample\\queries.gql:25:3: Cannot query field \"user\" on type \"Query\".\nexample\\queries.gql:44:3: Cannot query field \"movie\" on type \"Query\".\nexample\\queries.gql:68:3: Cannot query field \"movies\" on type \"Query\".\n\nsources: example\\mutations.gql [1243B] example\\queries.gql [1801B] \nI0405 11:27:07.142517    5736 control.go:100] [projects/emulator/locations/emulator/services/lifetrack-6ef3a-service 5ad3] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [0B] \nConnector \"example\": sources: example\\mutations.gql [1243B] example\\queries.gql [1801B] \n"}}
+[debug] [2026-04-05T03:27:07.150Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-04-05T03:27:07.150Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-04-05T03:27:07.150Z] Starting Data Connect Emulator with command {"binary":"C:\\Users\\Hp\\.cache\\firebase\\emulators\\dataconnect-emulator-3.3.1.exe","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=c:\\Users\\Hp\\Desktop\\OneDrive - University of Southampton\\Projects\\CloudApp\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\Hp\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.3.1.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=c:\\\\Users\\\\Hp\\\\Desktop\\\\OneDrive - University of Southampton\\\\Projects\\\\CloudApp\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[debug] [2026-04-05T03:27:07.242Z] I0405 11:27:07.208012    5504 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0405 11:27:07.208012    5504 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-04-05T03:27:07.249Z] W0405 11:27:07.248057    5504 control.go:74] [projects/emulator/locations/emulator/services/lifetrack-6ef3a-service 9370] connector "example" has errors: example\queries.gql:6:3: Cannot query field "movies" on type "Query".
+example\queries.gql:16:3: Cannot query field "users" on type "Query".
+example\queries.gql:25:3: Cannot query field "user" on type "Query".
+example\queries.gql:44:3: Cannot query field "movie" on type "Query".
+example\queries.gql:68:3: Cannot query field "movies" on type "Query".
+example\mutations.gql:6:3: Cannot query field "movie_insert" on type "Mutation".
+example\mutations.gql:12:3: Cannot query field "user_upsert" on type "Mutation".
+example\mutations.gql:18:3: Cannot query field "review_upsert" on type "Mutation".
+example\mutations.gql:32:3: Cannot query field "review_delete" on type "Mutation".
+
+sources: example\mutations.gql [1243B] example\queries.gql [1801B] 
+I0405 11:27:07.248057    5504 control.go:100] [projects/emulator/locations/emulator/services/lifetrack-6ef3a-service 9370] UpdateResources(): done
+Main schema: sources: schema\schema.gql [0B] 
+Connector "example": sources: example\mutations.gql [1243B] example\queries.gql [1801B] 
+E0405 11:27:07.248057    5504 load.go:73] Could not load sources: 
+Errors: example\queries.gql:6:3: Cannot query field "movies" on type "Query".
+example\queries.gql:16:3: Cannot query field "users" on type "Query".
+example\queries.gql:25:3: Cannot query field "user" on type "Query".
+example\queries.gql:44:3: Cannot query field "movie" on type "Query".
+example\queries.gql:68:3: Cannot query field "movies" on type "Query".
+example\mutations.gql:6:3: Cannot query field "movie_insert" on type "Mutation".
+example\mutations.gql:12:3: Cannot query field "user_upsert" on type "Mutation".
+example\mutations.gql:18:3: Cannot query field "review_upsert" on type "Mutation".
+example\mutations.gql:32:3: Cannot query field "review_delete" on type "Mutation".
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W0405 11:27:07.248057    5504 control.go:74] [projects/emulator/locations/emulator/services/lifetrack-6ef3a-service 9370] connector \"example\" has errors: example\\queries.gql:6:3: Cannot query field \"movies\" on type \"Query\".\nexample\\queries.gql:16:3: Cannot query field \"users\" on type \"Query\".\nexample\\queries.gql:25:3: Cannot query field \"user\" on type \"Query\".\nexample\\queries.gql:44:3: Cannot query field \"movie\" on type \"Query\".\nexample\\queries.gql:68:3: Cannot query field \"movies\" on type \"Query\".\nexample\\mutations.gql:6:3: Cannot query field \"movie_insert\" on type \"Mutation\".\nexample\\mutations.gql:12:3: Cannot query field \"user_upsert\" on type \"Mutation\".\nexample\\mutations.gql:18:3: Cannot query field \"review_upsert\" on type \"Mutation\".\nexample\\mutations.gql:32:3: Cannot query field \"review_delete\" on type \"Mutation\".\n\nsources: example\\mutations.gql [1243B] example\\queries.gql [1801B] \nI0405 11:27:07.248057    5504 control.go:100] [projects/emulator/locations/emulator/services/lifetrack-6ef3a-service 9370] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [0B] \nConnector \"example\": sources: example\\mutations.gql [1243B] example\\queries.gql [1801B] \nE0405 11:27:07.248057    5504 load.go:73] Could not load sources: \nErrors: example\\queries.gql:6:3: Cannot query field \"movies\" on type \"Query\".\nexample\\queries.gql:16:3: Cannot query field \"users\" on type \"Query\".\nexample\\queries.gql:25:3: Cannot query field \"user\" on type \"Query\".\nexample\\queries.gql:44:3: Cannot query field \"movie\" on type \"Query\".\nexample\\queries.gql:68:3: Cannot query field \"movies\" on type \"Query\".\nexample\\mutations.gql:6:3: Cannot query field \"movie_insert\" on type \"Mutation\".\nexample\\mutations.gql:12:3: Cannot query field \"user_upsert\" on type \"Mutation\".\nexample\\mutations.gql:18:3: Cannot query field \"review_upsert\" on type \"Mutation\".\nexample\\mutations.gql:32:3: Cannot query field \"review_delete\" on type \"Mutation\".\n"}}
+[debug] [2026-04-05T03:27:07.251Z] I0405 11:27:07.250104    5504 collector.go:107] schema extensions wrote into "c:\\Users\\Hp\\Desktop\\OneDrive - University of Southampton\\Projects\\CloudApp\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [80888B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0405 11:27:07.250104    5504 collector.go:107] schema extensions wrote into \"c:\\\\Users\\\\Hp\\\\Desktop\\\\OneDrive - University of Southampton\\\\Projects\\\\CloudApp\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: prelude.gql [80888B] \n"}}
+[debug] [2026-04-05T03:27:07.253Z] I0405 11:27:07.250104    5504 load.go:74] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0405 11:27:07.250104    5504 load.go:74] Finished reloading\n"}}
+[debug] [2026-04-05T03:27:07.278Z] I0405 11:27:07.276502    5504 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0405 11:27:07.276502    5504 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[debug] [2026-04-05T03:27:07.462Z] I0405 11:27:07.457511    5504 engine.go:209] [projects/emulator/locations/emulator/services/lifetrack-6ef3a-service 9370] ExecuteGraphqlRead query IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0405 11:27:07.457511    5504 engine.go:209] [projects/emulator/locations/emulator/services/lifetrack-6ef3a-service 9370] ExecuteGraphqlRead query IntrospectionQuery: succeeded. \n"}}

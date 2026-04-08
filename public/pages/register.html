@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Sign Up - LifeTrack</title>
@@ -9,6 +10,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/css/style.css" />
+=======
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Sign Up - LifeTrack</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Sign Up - LifeTrack</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            display: ["Manrope"]
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+        },
+      },
+    };
+  </script>
+</head>
+>>>>>>> 201809c4c06e9d8a65c8cec40e80c06ecd077008
 
     <script>
         tailwind.config = {
@@ -46,6 +92,7 @@
             </h2>
         </div>
 
+<<<<<<< HEAD
         <div class="@container">
             <div class="@[480px]:px-4 @[480px]:py-3">
                 <div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center overflow-hidden bg-primary/10 @[480px]:rounded-lg min-h-[218px] relative"
@@ -58,8 +105,40 @@
                     </div>
                 </div>
             </div>
+=======
+    <div class="pb-3 mt-4">
+      <div class="flex border-b border-slate-200 dark:border-slate-800 px-4 justify-between">
+        <a id="loginTab" class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[13px] pt-4 flex-1" href="/login">
+          <p class="text-sm font-bold leading-normal tracking-[0.015em]">Login</p>
+        </a>
+        <a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-[13px] pt-4 flex-1" href="/register">
+          <p class="text-sm font-bold leading-normal tracking-[0.015em]">Sign Up</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-4 px-4 py-4 max-w-lg mx-auto w-full">
+      <label class="flex flex-col w-full">
+        <p class="text-slate-900 dark:text-slate-100 text-sm font-semibold leading-normal pb-2">Full Name</p>
+        <input id="fullName" class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-slate-400 p-[15px] text-base font-normal" placeholder="John Doe" type="text" />
+      </label>
+
+      <label class="flex flex-col w-full">
+        <p class="text-slate-900 dark:text-slate-100 text-sm font-semibold leading-normal pb-2">Email Address</p>
+        <input id="email" class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-slate-400 p-[15px] text-base font-normal" placeholder="name@example.com" type="email" />
+      </label>
+
+      <label class="flex flex-col w-full">
+        <p class="text-slate-900 dark:text-slate-100 text-sm font-semibold leading-normal pb-2">Password</p>
+        <div class="flex w-full items-stretch rounded-lg">
+          <input id="password" class="form-input flex w-full min-w-0 flex-1 rounded-lg text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-slate-400 p-[15px] rounded-r-none border-r-0 pr-2 text-base font-normal" placeholder="Create a password" type="password" />
+          <div class="text-slate-400 flex border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 items-center justify-center pr-[15px] rounded-r-lg border-l-0">
+            <span class="material-symbols-outlined">visibility</span>
+          </div>
+>>>>>>> 201809c4c06e9d8a65c8cec40e80c06ecd077008
         </div>
 
+<<<<<<< HEAD
         <div class="pb-3 mt-4">
             <div class="flex border-b border-slate-200 dark:border-slate-800 px-4 justify-between">
                 <a id="loginTab" class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-[13px] pt-4 flex-1" href="/login">
@@ -70,6 +149,12 @@
                 </a>
             </div>
         </div>
+=======
+      <label class="flex flex-col w-full">
+        <p class="text-slate-900 dark:text-slate-100 text-sm font-semibold leading-normal pb-2">Confirm Password</p>
+        <input id="confirmPassword" class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-slate-400 p-[15px] text-base font-normal" placeholder="Repeat your password" type="password" />
+      </label>
+>>>>>>> 201809c4c06e9d8a65c8cec40e80c06ecd077008
 
         <div class="flex flex-col gap-4 px-4 py-4 max-w-lg mx-auto w-full">
             <label class="flex flex-col w-full">
@@ -261,5 +346,27 @@
 
         <script type="module" src="/js/register.js"></script>
     </div>
+<<<<<<< HEAD
+=======
+
+    <div class="grid grid-cols-2 gap-4 px-4">
+      <button class="flex items-center justify-center gap-2 h-12 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+        <span class="text-sm font-semibold">Google</span>
+      </button>
+      <button class="flex items-center justify-center gap-2 h-12 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+        <span class="text-sm font-semibold">Facebook</span>
+      </button>
+    </div>
+
+    <p class="text-center text-slate-500 dark:text-slate-400 text-sm mt-6">
+      Already have an account?
+      <a id="loginNowLink" class="text-primary font-bold hover:underline" href="/login">Login now</a>
+    </p>
+
+    <p id="registerMessage" class="text-sm text-center mt-3 text-red-500"></p>
+
+    <script type="module" src="/js/register.js"></script>
+  </div>
+>>>>>>> 201809c4c06e9d8a65c8cec40e80c06ecd077008
 </body>
 </html>

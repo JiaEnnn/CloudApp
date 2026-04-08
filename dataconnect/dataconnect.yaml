@@ -1,0 +1,13 @@
+specVersion: "v1"
+serviceId: "lifetrack-6ef3a-service"
+location: "us-east4"
+schemas:
+  - source: "./schema"
+    datasource:
+      postgresql:
+        database: "lifetrack-6ef3a-database"
+        cloudSql:
+          instanceId: "lifetrack-6ef3a-instance"
+          # schemaValidation: "STRICT"     # STRICT mode makes Postgres schema match Data Connect exactly.
+          # schemaValidation: "COMPATIBLE" # COMPATIBLE mode makes Postgres schema compatible with Data Connect.
+connectorDirs: ["./example"]

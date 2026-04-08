@@ -64,7 +64,6 @@ window.addEventListener("DOMContentLoaded", function () {
                 console.log("Firebase user created! UID:", user.uid);
 
                 // --- STEP 2: GET ID TOKEN ---
-                // We need this token so the backend can verify the request is real
                 const idToken = await user.getIdToken();
 
                 // --- STEP 3: BACKEND SQL SYNC ---
@@ -86,14 +85,11 @@ window.addEventListener("DOMContentLoaded", function () {
 
                 // --- SUCCESS STATE ---
                 alert("Success! Account created. Redirecting to your dashboard...");
-                
-                // Direct redirect to dashboard
                 window.location.href = "/dashboard";
 
             } catch (error) {
                 console.error("Registration error:", error);
                 
-                // Specific Firebase Error Handling
                 if (error.code === 'auth/email-already-in-use') {
                     alert("Error: That email is already registered.");
                 } else if (error.code === 'auth/invalid-email') {
