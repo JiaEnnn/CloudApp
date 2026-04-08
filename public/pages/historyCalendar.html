@@ -47,7 +47,7 @@
             </div>
             <h1 class="text-2xl font-black tracking-tighter text-slate-900 dark:text-slate-100">LifeTrack</h1>
         </div>
-        <button class="relative p-2 text-slate-600 dark:text-slate-400">
+        <button id="profile-btn" class="relative p-2 text-slate-600 dark:text-slate-400 active:scale-90 transition-transform">
             <span class="material-symbols-outlined text-2xl">account_circle</span>
         </button>
     </div>
@@ -191,31 +191,28 @@
 <!-- Visual Graph Summary Placeholder -->
 <div class="h-20"></div>
 </main>
-<!-- Bottom Menu Bar -->
+<!-- Bottom Menu -->
 <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 py-2 pb-6 flex items-center z-30 px-8">
     
     <div class="flex justify-between items-center w-full">
-        
-        <a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="/pages/dashboard.html">
+        <a id="menu-dashboard" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
             <span class="material-symbols-outlined text-2xl">grid_view</span>
             <span class="text-[10px] font-bold">Dashboard</span>
         </a>
-
-        <a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="/pages/habits.html">
+        <a id="menu-habits" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
             <span class="material-symbols-outlined text-2xl fill-1">format_list_bulleted</span>
             <span class="text-[10px] font-bold">Habits</span>
         </a>
-
-        <a class="flex flex-col items-center gap-1 text-primary" href="/pages/historyCalendar.html">
+        <a id="menu-history" class="flex flex-col items-center gap-1 text-primary" href="#">
             <span class="material-symbols-outlined text-2xl">history</span>
             <span class="text-[10px] font-bold">History</span>
         </a>
-
-        <a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="/pages/profile.html">
+        <a id="menu-settings" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
             <span class="material-symbols-outlined text-2xl">settings</span>
             <span class="text-[10px] font-bold">Settings</span>
         </a>
-        
+
     </div> </nav>
 </div>
+<script src="/js/historyCalendar.js"></script>
 </body></html>

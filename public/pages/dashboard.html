@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    
-    <link rel="stylesheet" href="/css/style.css">
 
-    <script id="tailwind-config">
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/style.css">
+<script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#137fec",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101922",
-                    },
-                    fontFamily: { "display": ["Manrope", "sans-serif"] },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+              },
+              fontFamily: {
+                "display": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
             },
+          },
         }
     </script>
-    <title>LifeTrack - Dashboard</title>
+
     <body class="font-display">
 
     <div class="app-container flex flex-col overflow-x-hidden">
@@ -38,10 +39,8 @@
     </style>
 </head>
 
-<body class="font-display">
-
-    <div class="app-container flex flex-col h-screen overflow-hidden">
-        
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl">
         <!-- Top Header -->
         <header class="flex-none bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
             <div class="flex items-center justify-between px-6 py-4">
@@ -51,13 +50,13 @@
                     </div>
                     <h1 class="text-2xl font-black tracking-tighter text-slate-900 dark:text-slate-100">LifeTrack</h1>
                 </div>
-                <button class="relative p-2 text-slate-600 dark:text-slate-400">
-                    <span class="material-symbols-outlined text-2xl">account_circle</span>
-                </button>
+                <button id="profile-btn" class="relative p-2 text-slate-600 dark:text-slate-400 active:scale-90 transition-transform">
+                <span class="material-symbols-outlined text-2xl">account_circle</span>
+            </button>
             </div>
         </header>
 
-        <main class="flex-1 overflow-y-auto px-6 py-6 space-y-8">
+        <main class="flex-1 overflow-y-auto px-6 pt-8 pb-[100px] space-y-8">
             <section>
                 <div class="bg-primary rounded-xl p-6 shadow-lg shadow-primary/20 relative overflow-hidden">
                     <div class="relative z-10">
@@ -172,34 +171,30 @@
             </section>
         </main>
 
-<!-- Bottom Menu Bar -->
+<!-- Bottom Menu -->
 <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 py-2 pb-6 flex items-center z-30 px-8">
     
     <div class="flex justify-between items-center w-full">
-        
-        <a class="flex flex-col items-center gap-1 text-primary" href="/pages/dashboard.html">
+        <a id="menu-dashboard" class="flex flex-col items-center gap-1 text-primary" href="#">
             <span class="material-symbols-outlined text-2xl">grid_view</span>
             <span class="text-[10px] font-bold">Dashboard</span>
         </a>
-
-        <a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="/pages/habits.html">
+        <a id="menu-habits" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
             <span class="material-symbols-outlined text-2xl fill-1">format_list_bulleted</span>
             <span class="text-[10px] font-bold">Habits</span>
         </a>
-
-        <a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="/pages/historyCalendar.html">
+        <a id="menu-history" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
             <span class="material-symbols-outlined text-2xl">history</span>
             <span class="text-[10px] font-bold">History</span>
         </a>
-
-        <a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="/pages/profile.html">
+        <a id="menu-settings" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
             <span class="material-symbols-outlined text-2xl">settings</span>
             <span class="text-[10px] font-bold">Settings</span>
         </a>
-        
-    </div> </nav>
-    </div>
 
-    <script type="module" src="/pages/dashboard.js"></script>
+    </div> </nav>
+</div>
+
+<script src="/js/dashboard.js"></script>
 </body>
 </html>
